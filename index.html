@@ -5,7 +5,7 @@
   <style>
     body {
       text-align: center;
-      padding-top: 200px;
+      padding-top: 50px;
     }
 
     h1 {
@@ -19,6 +19,24 @@
       color: #555;
     }
 
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      margin-top: 20px;
+      width: 400px;
+      height: 600px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
     button {
       font-family: Arial, sans-serif;
       font-size: 20px;
@@ -28,6 +46,7 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      margin: 0 10px;
     }
 
     button:hover {
@@ -36,13 +55,18 @@
   </style>
 </head>
 <body>
-  <h1>我的告白</h1>
-  <p>親愛的，我一直想告訴你一件事...</p>
-  <button onclick="showMessage()">點擊查看告白</button>
-
+  <div class="container">
+    <h1></h1>
+    <p>簡馨薆，我喜歡你，你願意當我的女朋友嗎</p>
+    <img src="https://i.pinimg.com/564x/9a/0d/6a/9a0d6a190a169a962af4c7bd768f410b.jpg" width="400" height="600"/>
+    <div class="button-container">
+      <button onclick="showMessage('')">我願意</button>
+      <button onclick="showMessage('誰准你不願意了給我回去重選')">我不願意</button>
+    </div>
+  </div>
   <script>
-    function showMessage() {
-      alert("我愛你，願意成為你的伴侶嗎？");
+    function showMessage(message) {
+      alert(message);
     }
   </script>
 </body>
