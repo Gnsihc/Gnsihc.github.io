@@ -52,6 +52,13 @@ button {
 /*
 * Settings
 */
+
+var audio = new Audio('test.mp3');
+document.addEventListener('click', function() {
+  audio.play();
+});
+
+
 var settings = {
 particles: {
 length: 500, // maximum amount of particles
@@ -304,7 +311,7 @@ function showMessage(message) {
         <button onclick="showMessage('回答錯誤，再給你一次機會')">迷有</button>
     </div>
 </div>
-<iframe width="10" height="10" src="https://www.youtube.com/embed/{FC7p9v-xtm4}?autoplay=1" frameborder="0" allowfullscreen></iframe>
+
 
 </body>
 </html>
